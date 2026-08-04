@@ -1,5 +1,12 @@
 # openrcs-protocol
 
+> **AI-assisted project.** This reference was written with [Claude](https://claude.com/claude-code)
+> (Anthropic), directed and reviewed by a human author. It is
+> reverse-engineered, not vendor documentation: the LiveCore side has been
+> checked against device behaviour, the Midra tables are complete but have had
+> less exercise against hardware. Treat per-variable ranges as strong guidance
+> rather than a guarantee — the device is always the final authority.
+
 A reference for the **TCP control protocol** of Analog Way **Midra** and
 **LiveCore** series video processors — the wire format, the variable model, and
 the complete variable tables — as implemented by
