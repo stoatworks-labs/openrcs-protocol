@@ -59,7 +59,7 @@ always the final authority.
 
 ## Licence
 
-Copyright © 2026 Allan Sargeant.
+Copyright © 2026 Stoatworks Labs.
 
 Documentation is licensed under [CC BY 4.0](LICENSE). You may share and adapt it
 with attribution.
