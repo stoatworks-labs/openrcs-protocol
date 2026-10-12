@@ -1,20 +1,20 @@
 # openrcs-protocol
 
 > **AI-assisted project.** This reference was written with [Claude](https://claude.com/claude-code)
-> (Anthropic), directed and reviewed by a human author. It is
+> (Anthropic), directed and reviewed by a human author. It's
 > reverse-engineered, not vendor documentation: the LiveCore side has been
-> checked against device behaviour, the Midra tables are complete but have had
-> less exercise against hardware. Treat per-variable ranges as strong guidance
-> rather than a guarantee — the device is always the final authority.
+> checked against device behaviour, and the Midra tables are complete but have
+> had less exercise against hardware. Treat per-variable ranges as strong
+> guidance rather than a guarantee, because the device always has the final say.
 
 A reference for the **TCP control protocol** of Analog Way **Midra** and
-**LiveCore** series video processors — the wire format, the variable model, and
-the complete variable tables — as implemented by
+**LiveCore** series video processors (the wire format, the variable model and
+the complete variable tables), as implemented by
 [openrcs](https://github.com/stoatworks-labs/openrcs).
 
-This repository is documentation only. It exists so anyone building control
-software for these processors has a single, precise description of how they talk
-on the network.
+This repository is documentation only. It's here so anyone building control
+software for these processors has one precise description of how they talk on
+the network, rather than a pile of packet captures and guesswork.
 
 Not affiliated with or endorsed by Analog Way. Product names are used only to
 describe compatibility.
@@ -32,11 +32,11 @@ describe compatibility.
 ## At a glance
 
 - **Transport:** TCP port 10500, one control socket, no handshake.
-- **Framing:** ASCII, asymmetric — a command ends with its mnemonic, a reply
+- **Framing:** ASCII, and asymmetric. A command ends with its mnemonic, a reply
   begins with it, and a reply's last comma-separated field is the value.
-- **Terminators:** Midra sends `CRLF`, LiveCore sends `LF`; the device replies
-  in `CRLF` on both.
-- **Push:** the device sends value updates unsolicited, so state must be read
+- **Terminators:** Midra sends `CRLF` and LiveCore sends `LF`, but the device
+  replies in `CRLF` on both.
+- **Push:** the device sends value updates unsolicited, so state has to be read
   continuously, not just polled.
 - **Errors:** a rejected command is answered `E<code>` (`E10` unknown, `E12`
   wrong index count).
@@ -48,14 +48,14 @@ describe compatibility.
 
 ## Using this
 
-Point an implementation at [framing.md](docs/framing.md) for the codec and the
-per-platform tables for the variables. The JSON in [`data/`](data) can be code-
-generated into a typed table; that is exactly what `openrcs` does.
+Point an implementation at [framing.md](docs/framing.md) for the codec and at
+the per-platform tables for the variables. The JSON in [`data/`](data) can be
+code-generated into a typed table, which is what `openrcs` does.
 
 The LiveCore side of this reference has been checked against device behaviour;
 the Midra tables are complete but have had less exercise against hardware. Treat
-per-variable ranges as strong guidance rather than a guarantee — the device is
-always the final authority.
+per-variable ranges as strong guidance rather than a guarantee: the device always
+has the final say.
 
 ## Licence
 
