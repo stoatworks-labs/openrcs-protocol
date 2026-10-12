@@ -2,9 +2,9 @@
 
 > **AI-assisted project.** This reference was written with [Claude](https://claude.com/claude-code)
 > (Anthropic), directed and reviewed by a human author. It's
-> reverse-engineered, not vendor documentation: the LiveCore side has been
-> checked against device behaviour, and the Midra tables are complete but have
-> had less exercise against hardware. Treat per-variable ranges as strong
+> reverse-engineered, not vendor documentation. Both sides have since been
+> checked against real hardware through openrcs, the LiveCore side on a
+> NeXtage 16 and the Midra side on a Pulse2. Treat per-variable ranges as strong
 > guidance rather than a guarantee, because the device always has the final say.
 
 A reference for the **TCP control protocol** of Analog Way **Midra** and
@@ -52,8 +52,8 @@ Point an implementation at [framing.md](docs/framing.md) for the codec and at
 the per-platform tables for the variables. The JSON in [`data/`](data) can be
 code-generated into a typed table, which is what `openrcs` does.
 
-The LiveCore side of this reference has been checked against device behaviour;
-the Midra tables are complete but have had less exercise against hardware. Treat
+Both sides of this reference have been checked against real hardware through
+openrcs: the LiveCore side on a NeXtage 16 and the Midra side on a Pulse2. Treat
 per-variable ranges as strong guidance rather than a guarantee: the device always
 has the final say.
 

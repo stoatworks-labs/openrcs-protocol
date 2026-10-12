@@ -6,9 +6,9 @@ processors**: the wire format, the variable model and the complete variable tabl
 **It's documentation only.** There's no software here. It exists so anyone building control
 software for these processors has one precise description of how they talk on the network.
 
-> **Before you rely on this:** it's **reverse-engineered, not vendor documentation.** The LiveCore
-> side has been checked against device behaviour; the **Midra tables are complete but have had less
-> exercise against hardware.**
+> **Before you rely on this:** it's **reverse-engineered, not vendor documentation.** Both sides
+> have since been checked against real hardware through openrcs, the LiveCore side on a
+> **NeXtage 16** and the Midra side on a **Pulse2**.
 >
 > **Treat per-variable ranges as strong guidance rather than a guarantee. The device always has the
 > final say.**
